@@ -42,7 +42,7 @@
                         <h5 style="font-size: 54px">Riseup Labs Written Task</h5>
                     </div>
                     <div class="col-8 col-lg-8 col-sm-8 mt-3">
-                        <a href="" class="btn btn-info">Problem 1</a>
+                        <a href="{{route('problem1')}}" class="btn btn-info">Problem 1</a>
                         <a href="{{route('problem2')}}" class="btn btn-warning">Problem 2</a>
                     </div>
                 </div>

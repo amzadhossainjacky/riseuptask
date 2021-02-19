@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Author\ArticleController;
+use App\Http\Controllers\Query\QueryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,9 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+//problem 1 route 
+Route::get('/query/builder', [QueryController::class, 'create'])->name('problem1');
 
 //problem 2 route 
 Route::get('/home', [HomeController::class, 'index'])->name('problem2');
