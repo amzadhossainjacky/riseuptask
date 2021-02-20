@@ -32,3 +32,7 @@ Route::get('/write/article', [ArticleController::class, 'writeArticle'])->name('
 Route::post('/store/article', [ArticleController::class, 'storeArticle'])->name('store.article');
 Route::get('/view/all/article', [ArticleController::class, 'viewAllArticle'])->name('view.all.article');
 
+
+Route::post('/query', [QueryController::class, 'queryBuilder'])->name('query.builder');
+
+
