@@ -35,9 +35,6 @@
 
             </div>
         </div>
-        <div class="col-lg-8">
-           
-        </div>
     </div>
 </div>
 @endsection

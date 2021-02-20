@@ -47,7 +47,12 @@ class QueryController extends Controller
         $rule = $request->rule;
 
         if($name1 == null){
-            return redirect()->back();
+            //return redirect()->back();
+            $notification=array(
+                'messege'=>'please, select any query below',
+                    'alert-type'=>'error'
+            );
+            return redirect()->back()->with($notification);
         }
 
         for ($i=0; $i <count($name1) ; $i++) { 
@@ -101,7 +106,13 @@ class QueryController extends Controller
             $results = DB::select(DB::raw($query));
             return view('query.view_query_results',compact('results'));
         } catch (\Illuminate\Database\QueryException $ex) {
-           return redirect()->back();
+
+            $notification=array(
+                'messege'=>'Please select valid query syntax',
+                    'alert-type'=>'error'
+            );
+            return redirect()->back()->with($notification);
+          // return redirect()->back();
         }
 
     }
